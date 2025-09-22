@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  display: flex;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 100vh;
+  z-index: 100;
+  background-color: rgba(90, 125, 145, 0.5);
+  /* ...resto de tus estilos... */
+}
+
+.logo img, .logo span {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 40px;
+}
+
+.sidebarIcons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  font-size: 24px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  color: #1d1212;
+}
+
+.icon.active {
+  color: #007bff;
+}
+
+.homeScreen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.searchBar {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.searchBar input {
+  width: 90%;
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 64px;
+  background-color: #f0f2f5;
+  color:rgba(44, 62, 80, 1);
+}
+
+.headerIcons {
+  color: black;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  
+}
+
+.headerIcons span {
+  font-size: 24px;
+  margin-left: 15px;
+  cursor: pointer;
+  margin-right: '24px'
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 100vh;
+  z-index: 100;
+  /* ...resto de tus estilos... */
+}
+
+.app {
+  margin-left: 90px; /* igual al ancho de la barra lateral */
+}
+.profileIcon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.feed {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.post {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.postHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.authorImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.postInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.authorName {
+  font-weight: bold;
+}
+
+.postDate {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.followButton {
+  background-color: #2f4964;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.postBody p {
+  margin: 0 0 15px 0;
+}
+
+.postImage {
+  width: 100%;
+  border-radius: 10px;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.postActions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.postActions span {
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
