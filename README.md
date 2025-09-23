@@ -1,12 +1,44 @@
-# React + Vite
+# NIC-MEMORIES
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+NIC-MEMORIES es una aplicación web desarrollada en React que permite dejar huellas y hacer eterna la memoria de nuestro pueblo nicaragüense. Incluye funcionalidades como registro, inicio de sesión, publicaciones, biblioteca y más.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Registro y autenticación de usuarios
+- Publicación de recuerdos y fotos
+- Biblioteca de recursos culturales
+- Interfaz moderna y responsiva
+- Barra lateral fija con iconos de navegación
 
-## Expanding the ESLint configuration
+## Instalación
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clona el repositorio:
+2. Instala las dependencias:
+3. Inicia la aplicación:
+
+
+## Uso
+
+- Accede a la app en [http://localhost:5173](http://localhost:5173)
+- Regístrate o inicia sesión para comenzar a publicar y explorar la biblioteca.
+
+## Tecnologías
+
+- React
+- Vite
+- react-icons
+- CSS personalizado
+
+## Estructura del proyecto
+
+- `src/` - Código fuente principal
+- `src/App.jsx` - Componente principal
+- `src/principal.jsx` - Pantalla principal con feed y barra lateral
+- `src/registrarse.jsx` - Formulario de registro
+- `src/App.css` y `src/prin.css` - Estilos personalizados
+
+## Autor
+
+- hamilrey
+
+

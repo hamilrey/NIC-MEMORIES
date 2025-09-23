@@ -24,6 +24,13 @@ const Sidebar = () => {
         <div className="icon">
           <FaMapMarkerAlt size={24} />
         </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <div className="icon">
           <FaCog size={24} />
         </div>
