@@ -1,3 +1,4 @@
+import FormularioDepartamentos from './FormularioDepartamentos';
 import { useNavigate } from 'react-router-dom';
 import './App.css'
 
@@ -18,8 +19,7 @@ function Registrarse() {
         </div>
            <br />
         <div className='input'>
-            <label htmlFor='Departamento/Región'>Departamento/Región</label>
-            <input type='text' id='Departamento/Región' placeholder='Siuna / RACCN'></input>
+            <FormularioDepartamentos />
         </div>
            <br />
         <div className='input'>

@@ -270,3 +270,83 @@ h2{
     padding: 20px;
   }
 }
+/* Contenedor del campo (opcional, para centrarlo o darle espacio) */
+.form-container {
+  padding: 20px;
+  background-color: #f9f7f4; /* Un color de fondo similar al de la imagen */
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos principales para el input/select */
+.custom-select-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para que se vea elevado */
+  overflow: hidden; /* Oculta cualquier cosa que se salga del borde redondeado */
+}
+
+/* Estilo para el campo de texto dentro del select */
+.custom-select-field {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  color: #333;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* El ícono de la flecha */
+.custom-select-field::after {
+  content: '▲'; /* La flecha que apunta hacia arriba */
+  font-size: 12px;
+  color: #666;
+  transition: transform 0.3s ease;
+}
+
+/* Rotar la flecha cuando el menú está abierto */
+.custom-select-container.open .custom-select-field::after {
+  transform: rotate(180deg);
+}
+
+/* Estilos para el texto seleccionado */
+.custom-select-value {
+  color: #000;
+  font-weight: 500;
+}
+/* Lista desplegable de opciones */
+.custom-options-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #ccc;
+  max-height: 200px; /* Limita la altura para que aparezca un scroll si hay muchas opciones */
+  overflow-y: auto; /* Permite el scroll vertical */
+}
+
+/* Estilo para cada opción de la lista */
+.custom-option-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: background-color 0.2s ease;
+}
+
+/* Separador entre opciones (opcional, pero ayuda a la estética) */
+.custom-option-item:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+/* Estilo al pasar el mouse sobre una opción */
+.custom-option-item:hover {
+  background-color: #f0f0f0;
+}
