@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 const departamentosRoutes = require("./routes/departamentos");
+const usuariosRoutes = require("./routes/usuarios");
 
 const app = express();
 
