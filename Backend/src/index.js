@@ -15,6 +15,8 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/nic-memor
   .then(() => console.log("Conectado a MongoDB"))
   .catch(err => console.error("Error conectando a MongoDB:", err));
 
+// AGREGA ESTA LÍNEA (rutas de usuarios)
+app.use("/api/usuarios", usuariosRoutes);
 app.use("/api/departamentos", departamentosRoutes);
 
 app.get("/", (req, res) => {
