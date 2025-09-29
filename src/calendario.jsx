@@ -12,10 +12,10 @@ export default function Calendario() {
   };
 
   return (
-    <div className="flex bg-gray-100 h-screen">
-      {/* Calendario en el centro */}
-      <div className="flex-1 p-6">
-        <h2 className="text-2xl font-bold text-center mb-4">SEPTIEMBRE 2025</h2>
+    <div style={{ display: 'flex', background: '#f3f1ea', minHeight: '100vh', alignItems: 'flex-start', justifyContent: 'center', gap: 40, padding: 40 }}>
+      {/* Calendario */}
+      <div style={{ background: '#fff', borderRadius: 16, boxShadow: '0 2px 12px rgba(0,0,0,0.06)', padding: 24, minWidth: 370 }}>
+        <h2 style={{ fontSize: 28, fontWeight: 700, textAlign: 'center', marginBottom: 16 }}>SEPTIEMBRE 2025</h2>
         <Calendar
           value={value}
           onChange={setValue}
@@ -56,31 +56,30 @@ export default function Calendario() {
           }}
         />
       </div>
-
-      {/* Panel derecho para recordatorios */}
-      <aside className="w-64 bg-gray-200 p-4">
-        <h3 className="font-bold mb-2">Añadir Recordatorio</h3>
-        <div className="mb-2">
-          <label className="block text-sm mb-1">Fecha seleccionada:</label>
+      {/* Añadir Recordatorio al lado */}
+      <aside style={{ width: 260, background: '#f5e9e6', borderRadius: 16, boxShadow: '0 2px 12px rgba(0,0,0,0.06)', padding: 24, marginTop: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
+        <h3 style={{ fontWeight: 700, marginBottom: 8, fontSize: 20 }}>Añadir Recordatorio</h3>
+        <div style={{ marginBottom: 8 }}>
+          <label style={{ display: 'block', fontSize: 15, marginBottom: 4 }}>Fecha seleccionada:</label>
           <input
             type="text"
             value={value.toDateString()}
             readOnly
-            className="w-full border px-2 py-1 rounded bg-gray-100"
+            style={{ width: '100%', border: '1px solid #bbb', padding: '6px 8px', borderRadius: 6, background: '#222', color: '#fff', fontSize: 15 }}
           />
         </div>
-        <div className="mb-2">
-          <label className="block text-sm mb-1">Hora:</label>
+        <div style={{ marginBottom: 8 }}>
+          <label style={{ display: 'block', fontSize: 15, marginBottom: 4 }}>Hora:</label>
           <input
             type="time"
             value={time}
             onChange={(e) => setTime(e.target.value)}
-            className="w-full border px-2 py-1 rounded"
+            style={{ width: '100%', border: '1px solid #bbb', padding: '6px 8px', borderRadius: 6, fontSize: 15 }}
           />
         </div>
         <button
           onClick={handleAddReminder}
-          className="bg-blue-600 text-white w-full py-2 rounded"
+          style={{ background: '#8b5c5c', color: '#fff', width: '100%', padding: '10px 0', borderRadius: 20, fontWeight: 600, fontSize: 17, border: 'none', marginTop: 8, cursor: 'pointer' }}
         >
           Guardar
         </button>
