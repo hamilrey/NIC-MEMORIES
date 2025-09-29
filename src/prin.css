@@ -11,6 +11,7 @@ body {
   display: flex;
   background-color: #f0f2f5;
   min-height: 100vh;
+  margin-left: 90px; /* igual al ancho de la barra lateral */
 }
 
 .sidebar {
@@ -21,7 +22,6 @@ body {
   height: 100vh;
   z-index: 100;
   background-color: rgba(90, 125, 145, 0.5);
-  /* ...resto de tus estilos... */
 }
 
 .logo img, .logo span {
@@ -53,13 +53,20 @@ body {
   flex-direction: column;
 }
 
+/* BARRA DE BÚSQUEDA FIJA EN LA PARTE SUPERIOR */
 .header {
+  position: fixed;
+  top: 0;
+  left: 90px; /* mismo ancho que la sidebar */
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   background-color: white;
   border-bottom: 1px solid #ddd;
+  z-index: 99; /* por debajo de la sidebar pero encima del contenido */
+  height: 60px; /* altura fija */
 }
 
 .searchBar {
@@ -73,7 +80,8 @@ body {
   border: 1px solid #ccc;
   border-radius: 64px;
   background-color: #f0f2f5;
-  color:rgba(44, 62, 80, 1);
+  color: rgba(44, 62, 80, 1);
+  font-size: 14px;
 }
 
 .headerIcons {
@@ -81,28 +89,15 @@ body {
   display: flex;
   align-items: center;
   cursor: pointer;
-  
 }
 
 .headerIcons span {
   font-size: 24px;
   margin-left: 15px;
   cursor: pointer;
-  margin-right: '24px'
-}
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 90px;
-  height: 100vh;
-  z-index: 100;
-  /* ...resto de tus estilos... */
+  margin-right: 24px;
 }
 
-.app {
-  margin-left: 90px; /* igual al ancho de la barra lateral */
-}
 .profileIcon img {
   width: 40px;
   height: 40px;
@@ -110,9 +105,12 @@ body {
   object-fit: cover;
 }
 
+/* CONTENIDO PRINCIPAL - Ajustado para la barra fija */
 .feed {
   padding: 20px;
   overflow-y: auto;
+  margin-top: 60px; /* igual a la altura del header */
+  height: calc(100vh - 60px); /* altura completa menos el header */
 }
 
 .post {
