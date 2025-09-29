@@ -4,6 +4,7 @@ import Ingresar from './ingresar.jsx'
 import Registrarse from './registrarse.jsx';
 import Principal from './principal.jsx';
 import Biblioteca from './biblioteca.jsx';
+import Calendario from './calendario.jsx';
 import './App.css'
 
 function Home() {
@@ -31,6 +32,7 @@ function App() {
         <Route path="/registrarse" element={<Registrarse />} />
         <Route path="/principal" element={<Principal />} />
         <Route path="/biblioteca" element={<Biblioteca />} />
+        <Route path="/calendario" element={<Calendario />} />
       </Routes>
     </Router>
   );

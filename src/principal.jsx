@@ -19,7 +19,7 @@ const Sidebar = () => {
           <FaPlus size={24} />
         </div>
         <div className="icon">
-          <FaCalendarAlt size={24} />
+          <FaCalendarAlt size={24} onClick={() => navigate('/calendario')} />
         </div>
         <div className="icon">
           <FaMapMarkerAlt size={24} />
