@@ -38,4 +38,18 @@ function App() {
   );
 }
 
-export default App
+function Api(){
+  const [data, setData] = useState('');
+  const [users, setUsers] = useState([]);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch('https://localhost:5000/api/data');
+     const result = await response.json();
+      setData(result.message);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  }
+}
+export default App;
