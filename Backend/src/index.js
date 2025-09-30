@@ -8,6 +8,13 @@ const usuariosRoutes = require("./routes/usuarios");
 
 const app = express();
 
+const postsRoutes = require('./routes/posts');
+const eventosRoutes = require('./routes/eventos');
+
+// Después de las otras rutas
+app.use("/api/posts", postsRoutes);
+app.use("/api/eventos", eventosRoutes);
+
 app.use(cors());
 app.use(express.json());
 
